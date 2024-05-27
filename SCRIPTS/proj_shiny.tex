@@ -1,0 +1,1181 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{pdfpages}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{setspace}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\includepdf{Page_de_garde}
+
+\newpage
+
+\setstretch{1}
+
+\renewcommand{\contentsname}{\textcolor{blue}{Sommaire}}
+
+\textcolor{blue}{\tableofcontents}
+
+\newpage
+
+\begin{tcolorbox}[colback=white,colframe=blue, title=Avant-propos ]
+
+Créée en 2008, l’École Nationale de la Statistique et de l’Analyse Économique (ENSAE) est une grande école de statistique à caractère sous-régional située à Dakar (capitale du Sénégal). Elle constitue une direction de l’Agence Nationale de la Statistique et de la Démographie (ANSD), qui est la structure principale du Système Statistique Nationale du Sénégal. 
+
+
+  Les élèves Ingénieurs Statisticiens Economistes qui suivent une formation de ISE (03 ans) à l'ENSAE  se doivent de suivre le module \textcolor{blue}{Projet statistique sous R } pour apprendre à utiliser et à traiter les données statistiques avec ce logiciel et à synthétiser les données à travers des graphiques afin de faciliter leur comprehension. 
+  
+  
+C’est dans cette optique que s’inscrit ce projet dont le but est de nous plonger au coeur de R Shiny. 
+  
+\end{tcolorbox}
+
+\newpage
+
+\textcolor{blue}{\section*{INTRODUCTION}\addcontentsline{toc}{section}{INTRODUCTION}}
+
+Dans le paysage en constante évolution de l'analyse et de la
+visualisation de données, la nécessité de partager des résultats de
+manière interactive et convaincante devient de plus en plus cruciale.
+
+Pour cela, le langage R propose le package \textbf{Shiny} qui sert à
+créer des applications web interactives permettant d'analyser des
+données, d'afficher des graphiques, d'exécuter les modèles statistiques
+de façon dynamique,\ldots{} C'est vraiment un outil puissant pour
+présenter ses données de façon interactive à des collègues, partenaires,
+clients et très simplement en leur partageant juste l'URL de
+l'application sur le web. L'application Web peut être intégrée dans un
+document R Markdown, une page Web, de manière autonome ou en tant que
+tableau de bord. La grande force de Shiny réside dans le fait
+qu'\textbf{il n'est absolument pas nécessaire de connaître HTML, CSS ou
+JavaScript} : tout se fait directement en R.
+
+Ce rapport vise à explorer en détail la conception et la publication en
+ligne des applications Shiny, fournissant ainsi un guide complet pour
+ceux qui cherchent à tirer parti de cette technologie puissante.
+
+En commençant par une vue d'ensemble des fonctionnalités de R Shiny,
+nous plongerons ensuite dans les étapes pratiques pour mettre en place
+une application Shiny, en marquant un temps d'arrêt sur
+\textcolor{blue}{Shinydashbord}.
+
+\newpage
+
+\hypertarget{chargement-des-packages-nuxe9cessaires}{%
+\section{Chargement des packages
+nécessaires}\label{chargement-des-packages-nuxe9cessaires}}
+
+L'élaboration de ce document necessite les packages suivants:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)  }
+\CommentTok{\# Permet de manipuler, analyser et visualiser des données }
+\FunctionTok{library}\NormalTok{(shiny) }
+\CommentTok{\# Pour créer des applications web interactives pour analyser et visualiser des données }
+\FunctionTok{library}\NormalTok{(bslib) }
+\CommentTok{\# Permet de personnaliser facilement l\textquotesingle{}apparence d\textquotesingle{}une application Shiny}
+\FunctionTok{library}\NormalTok{(shinydashboard)}
+\CommentTok{\# Extension de Shiny simplifiant la création de tableaux de bord interactifs et attrayants }
+\FunctionTok{library}\NormalTok{(datasets)}
+\CommentTok{\#Pour accéder à divers jeux de données standards (iris, mtcars, airquality,...)}
+\FunctionTok{library}\NormalTok{(DT) }
+\CommentTok{\# Permet de transformer des dataframes en tables dynamiques et interactives}
+\FunctionTok{library}\NormalTok{(rsconnect) }
+\CommentTok{\# Pour déployer des applications et des documents R sur des serveurs web}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{guxe9nuxe9ralituxe9s-sur-r-shiny}{%
+\section{Généralités sur R
+Shiny}\label{guxe9nuxe9ralituxe9s-sur-r-shiny}}
+
+Pour créer une application avec R Shiny, il faut au préalable installer
+le package \textcolor{blue}{shiny.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"shiny"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{principes-dune-application-shiny}{%
+\subsection{Principes d'une application
+Shiny}\label{principes-dune-application-shiny}}
+
+Une application Shiny est composée de deux parties essentielles :
+l'interface utilisateur (UI) et la logique du serveur.
+
+\begin{itemize}
+\item
+  L'UI définit la mise en page et les éléments interactifs de
+  l'application.
+\item
+  Le serveur gère la logique métier, traite les données et génère les
+  sorties à afficher.
+\item
+  L'interaction entre l'UI et le serveur permet de créer des
+  applications réactives (app).
+\end{itemize}
+
+Ainsi, il est préférable d'organiser l'application en au moins 3
+fichiers :
+
+\begin{itemize}
+\item
+  \textbf{ui.R} pour l'interface utilisateur;
+\item
+  \textbf{server.R} pour la logique du serveur;
+\item
+  \textbf{app.R} qui rassemble les 2 et lance l'application.
+\end{itemize}
+
+\hypertarget{cruxe9ation-dun-fichier-r-shiny}{%
+\subsection{Création d'un fichier R
+Shiny}\label{cruxe9ation-dun-fichier-r-shiny}}
+
+Pour créer un fichier R Shiny, il suffit de suivre les étapes ci-après:
+
+\begin{itemize}
+\item
+  Dans la \emph{barre de menu}, cliquer sur \textbf{File}
+\item
+  Puis, cliquer sur \emph{New File} puis sur \emph{Shiny Web App}
+\item
+  Dans la boîte de dialogue qui s'affiche, entrer le nom de votre
+  fichier
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Définir le type d'application à créer: un app.R ou alors deux
+    fichiers ui.R et server.R
+  \item
+    Préciser son emplacement au niveau de \emph{browser}
+  \item
+    Cliquer sur \emph{Create} pour valider
+  \end{itemize}
+\end{itemize}
+
+Un fichier modèle s'ouvre .
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(shiny)}
+\CommentTok{\# Définir l’interface utilisateur de l’application qui dessine un histogramme}
+\NormalTok{ui }\OtherTok{\textless{}{-}} \FunctionTok{fluidPage}\NormalTok{(}
+    \CommentTok{\# Titre de l\textquotesingle{}application}
+    \FunctionTok{titlePanel}\NormalTok{(}\StringTok{"Old Faithful Geyser Data"}\NormalTok{),}
+    
+    \CommentTok{\# Barre latérale avec un curseur pour le nombre de bacs }
+    \FunctionTok{sidebarLayout}\NormalTok{(}
+        \FunctionTok{sidebarPanel}\NormalTok{(}
+            \FunctionTok{sliderInput}\NormalTok{(}\StringTok{"bins"}\NormalTok{,}
+                        \StringTok{"Number of bins:"}\NormalTok{,}
+                        \AttributeTok{min =} \DecValTok{1}\NormalTok{,}
+                        \AttributeTok{max =} \DecValTok{50}\NormalTok{,}
+                        \AttributeTok{value =} \DecValTok{30}\NormalTok{)}
+\NormalTok{        ),}
+        \CommentTok{\# Afficher un tracé de la distribution générée}
+        \FunctionTok{mainPanel}\NormalTok{(}
+           \FunctionTok{plotOutput}\NormalTok{(}\StringTok{"distPlot"}\NormalTok{)}
+\NormalTok{        )}
+\NormalTok{    )}
+\NormalTok{)}
+\CommentTok{\# Définir la logique serveur requise pour dessiner un histogramme}
+\NormalTok{server }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(input, output) \{}
+
+\NormalTok{    output}\SpecialCharTok{$}\NormalTok{distPlot }\OtherTok{\textless{}{-}} \FunctionTok{renderPlot}\NormalTok{(\{}
+        \CommentTok{\# Générer des bins basés sur Input$bins à partir de l’interface utilisateur. R}
+\NormalTok{        x    }\OtherTok{\textless{}{-}}\NormalTok{ faithful[, }\DecValTok{2}\NormalTok{]}
+\NormalTok{        bins }\OtherTok{\textless{}{-}} \FunctionTok{seq}\NormalTok{(}\FunctionTok{min}\NormalTok{(x), }\FunctionTok{max}\NormalTok{(x), }\AttributeTok{length.out =}\NormalTok{ input}\SpecialCharTok{$}\NormalTok{bins }\SpecialCharTok{+} \DecValTok{1}\NormalTok{)}
+        
+        \CommentTok{\# Dessinez l’histogramme avec le nombre de groupes spécifié}
+        \FunctionTok{hist}\NormalTok{(x, }\AttributeTok{breaks =}\NormalTok{ bins, }\AttributeTok{col =} \StringTok{\textquotesingle{}darkgray\textquotesingle{}}\NormalTok{, }\AttributeTok{border =} \StringTok{\textquotesingle{}white\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{xlab =} \StringTok{\textquotesingle{}Waiting time to next eruption (in mins)\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{main =} \StringTok{\textquotesingle{}Histogram of waiting times\textquotesingle{}}\NormalTok{)}
+\NormalTok{    \})}
+\NormalTok{\}}
+
+\CommentTok{\# Exécuter l\textquotesingle{}application }
+\FunctionTok{shinyApp}\NormalTok{(}\AttributeTok{ui =}\NormalTok{ ui, }\AttributeTok{server =}\NormalTok{ server)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{proj_shiny_files/figure-latex/fichier_modèle-1.pdf}
+
+Il suffit de compiler pour avoir le résultat ci-dessous:
+
+\includegraphics{images/base_shiny.png}
+
+\hypertarget{application-minimale}{%
+\subsection{Application minimale}\label{application-minimale}}
+
+Une application Shiny a besoin d'au moins les 4 lignes suivantes :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(shiny) }\CommentTok{\# Pour le chargement du package Shiny}
+
+\NormalTok{ui }\OtherTok{\textless{}{-}} \FunctionTok{fluidPage}\NormalTok{() }\CommentTok{\#pour la création de l\textquotesingle{}interface utilisateur}
+
+\NormalTok{server }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(input, output)\{\} }\CommentTok{\#pour la partie serveur}
+
+\FunctionTok{shinyApp}\NormalTok{(ui, server) }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{proj_shiny_files/figure-latex/Application_minimale-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#crée l’application avec l’ui et la logique de serveur précédemment créées.}
+\end{Highlighting}
+\end{Shaded}
+
+Notons que \textcolor{blue}{fluidPage} permet de créer une page Shiny
+\textbf{fluide} qui s'adapte à la taille de la fenêtre du navigateur.
+D'autres types de page existent comme
+\textbf{\textcolor{blue}{fixedPage()}}. Contrairemment à une fluidPage,
+une fixedPage a une taille limite.
+
+\newpage
+
+\hypertarget{structuration-de-lapplication}{%
+\section{Structuration de
+l'application}\label{structuration-de-lapplication}}
+
+\hypertarget{cruxe9ation-de-linterface-utilisateur}{%
+\subsection{Création de l'interface utilisateur
+:}\label{cruxe9ation-de-linterface-utilisateur}}
+
+\hypertarget{les-layoutsdispositions}{%
+\subsubsection{Les
+Layouts(dispositions)}\label{les-layoutsdispositions}}
+
+Un \textbf{layout} dans R Shiny est la structure visuelle de
+l'application. Il détermine comment les éléments de l'interface
+utilisateur sont disposés et organisés.
+
+Une \textbf{interface utilisateur} est généralement définie comme une
+série de fonctions imbriquées, dans l'ordre suivant:
+
+1 . Une fonction définissant la disposition générale (la plus
+basique,mais d'autres sont aussi disponibles) qui est :
+\texttt{fluidPage()}
+
+2 . Définition de Panneaux dans la mise en page tels qu'une barre
+latérale(\texttt{sidebarPanel()}), un panneau « principal » (
+\texttt{mainPanel()}), un onglet (\texttt{tabPanel()}).
+
+Pour la création des onglets,les fonctions \texttt{tabsetPanel()} ou
+encore \texttt{navlistPanel()} de Shiny sont nécessaires pour disposer
+les onglets horizontalement ou verticalement et diviser les sorties en
+plusieurs sections indépendantes.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(shiny)}
+\NormalTok{ui }\OtherTok{\textless{}{-}} \FunctionTok{fluidPage}\NormalTok{(}
+  \FunctionTok{titlePanel}\NormalTok{(}\StringTok{"Notre application Shiny"}\NormalTok{),}
+  \FunctionTok{sidebarLayout}\NormalTok{(}
+  \FunctionTok{sidebarPanel}\NormalTok{(}\StringTok{"Panneau lateral"}\NormalTok{),}
+\FunctionTok{mainPanel}\NormalTok{(}\StringTok{"Panneau principal"}\NormalTok{, }\FunctionTok{navlistPanel}\NormalTok{(}\FunctionTok{tabPanel}\NormalTok{(}\StringTok{\textquotesingle{}Onglet1\textquotesingle{}}\NormalTok{),}\FunctionTok{tabPanel}\NormalTok{(}\StringTok{\textquotesingle{}Onglet2\textquotesingle{}}\NormalTok{)))}
+\NormalTok{               )}
+\NormalTok{               )}
+\end{Highlighting}
+\end{Shaded}
+
+Voici comment se présentent les différentes dispositions :
+
+\includegraphics{images/clipboard-2646785340.png}
+
+\hypertarget{autres-dispositions}{%
+\subsubsection{Autres dispositions :}\label{autres-dispositions}}
+
+D'autres dispositions sont également possibles grâce à diverses autres
+fonctions dont nous donnerons seulement quelques exemples:
+
+\begin{itemize}
+\item
+  Nous pouvons créer une barre de navigation en haut de l'écran avec la
+  fonctionc \textcolor{blue}{navbarPage()}
+\item
+  Nous pouvons créer un menu complet en utilisant la fonction
+  \textcolor{blue}{navbarMenu()} et regrouper le tabPanel() sous
+  différentes options de menu.
+\item
+  Il y a également la création de colonnes avec
+  \textcolor{blue}{column()...}
+\end{itemize}
+
+\textbf{Notons que :} Avec les packages \textbf{bslib} ou
+\textbf{shinydashboard} , nous pouvons créer des interfaces et des
+dispositions plus sophistiquées avec des fonctions spécifiques à ces
+packages.
+
+\hypertarget{inputs-outputs}{%
+\subsection{Inputs-Outputs}\label{inputs-outputs}}
+
+\hypertarget{inputswidgets}{%
+\subsubsection{Inputs(widgets)}\label{inputswidgets}}
+
+Les \textbf{inputs} donnent aux utilisateurs la possibilité d'interagir
+avec l'application et sont placés dans le panneau latéral
+(sidebarPanel()). Par exemple la fonction \textcolor{blue}{textInput}
+permet à l'utilisateur d'entrer un texte ;
+\textcolor{blue}{numericInput} permet d'entrer une valeur numerique.
+Toutes les fonctions d'entrées ont les deux premiers arguments suivants
+en commun:
+
+\begin{itemize}
+\item
+  \textbf{L'inputiD} qui doit être unique pour chacune d'elles;
+\item
+  \textbf{Le label} qui est la description du widget.
+\end{itemize}
+
+Dans l'exemple qui suit, nous avons utilisé \texttt{textInput()} pour
+demander à l'utilisateur son nom et son prénom, \texttt{selectInput()}
+pour sélectionner les variables qui doivent être affichées de la base de
+données Iris et \texttt{sliderInput()} un curseur, pour régler le nombre
+de barres de l'histogramme que l'on va definir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(shiny)}
+\FunctionTok{data}\NormalTok{(iris)}
+\NormalTok{  ui }\OtherTok{\textless{}{-}} \FunctionTok{fluidPage}\NormalTok{(}
+    \FunctionTok{titlePanel}\NormalTok{(}\StringTok{"Notre  application Shiny"}\NormalTok{),}
+    \FunctionTok{sidebarLayout}\NormalTok{(  }
+      \FunctionTok{sidebarPanel}\NormalTok{(  }
+        \FunctionTok{textInput}\NormalTok{(}\AttributeTok{inputId =} \StringTok{\textquotesingle{}text\textquotesingle{}}\NormalTok{,}\AttributeTok{label =} \StringTok{"Nom et prénom de l\textquotesingle{}utilisateur"}\NormalTok{ ),}
+        \FunctionTok{sliderInput}\NormalTok{(}\StringTok{"curseur"}\NormalTok{, }\StringTok{"Nombre de bins:"}\NormalTok{, }
+                    \AttributeTok{min =} \DecValTok{1}\NormalTok{, }\AttributeTok{max =} \DecValTok{50}\NormalTok{, }\AttributeTok{value =} \DecValTok{30}\NormalTok{),}
+       \FunctionTok{selectInput}\NormalTok{(}\AttributeTok{inputId =} \StringTok{\textquotesingle{}var\textquotesingle{}}\NormalTok{,}\AttributeTok{label =} \StringTok{\textquotesingle{}choisir une variable\textquotesingle{}}\NormalTok{,}\AttributeTok{choices=}\FunctionTok{names}\NormalTok{(iris))}
+\NormalTok{  ),}
+    \FunctionTok{mainPanel}\NormalTok{()}
+\NormalTok{    )}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{images/clipboard-1248618430.png}
+
+Il existe une varieté d'inputs pour des actions spécifiques\ldots{}
+
+\includegraphics{images/clipboard-690820220.png}
+
+\hypertarget{outputs}{%
+\subsubsection{Outputs}\label{outputs}}
+
+Les \textbf{Outputs} permettent de créer des espaces reservés pour les
+sorties que l'on veut visualiser dans la barre principale. Les sorties
+peuvent être n'importe quel objet créé par R et que nous voulons
+afficher dans notre application, tel qu'un graphique, un tableau\ldots{}
+
+Shiny fournit plusieurs fonctions outputs spécifiques au type de sortie.
+Dans notre exemple, nous affichons du texte via
+\textcolor{blue}{textOutput()}, une table interactive via
+\textcolor{blue}{DToutput()}, un resumé statistique via
+\textcolor{blue}{verbatimTextOutput()} et un histogramme avec
+\textcolor{blue}{plotOutput()} en plaçant chaque sortie dans un onglet.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(DT)}
+\NormalTok{interface }\OtherTok{\textless{}{-}} \FunctionTok{fluidPage}\NormalTok{(}
+  \FunctionTok{sidebarLayout}\NormalTok{(}
+  \FunctionTok{sidebarPanel}\NormalTok{(),}
+\FunctionTok{mainPanel}\NormalTok{ (}
+ \FunctionTok{navlistPanel}\NormalTok{(}
+    \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Nom et Prénom"}\NormalTok{,}\FunctionTok{textOutput}\NormalTok{(}\AttributeTok{outputId =} \StringTok{"name"}\NormalTok{)),}
+    \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Visualisation des données"}\NormalTok{,}\FunctionTok{DTOutput}\NormalTok{(}\AttributeTok{outputId =} \StringTok{"iris\_data"}\NormalTok{)),}
+    \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Statistiques"}\NormalTok{,}\FunctionTok{verbatimTextOutput}\NormalTok{(}\AttributeTok{outputId =} \StringTok{\textquotesingle{}summary\textquotesingle{}}\NormalTok{)),}
+    \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Histogramme"}\NormalTok{,}\FunctionTok{plotOutput}\NormalTok{(}\AttributeTok{outputId =} \StringTok{\textquotesingle{}hist\textquotesingle{}}\NormalTok{))}
+  
+\NormalTok{      )}
+\NormalTok{    )}
+\NormalTok{  )}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Voici comment s'affichent nos différents onglets correspondants aux
+outputs cités plus haut:
+
+\includegraphics{images/clipboard-247858739.png}
+
+Voici quelques outputs et leurs fonctions:
+
+\includegraphics{images/clipboard-2232403312.png}
+
+De la même manière que les fonctions d'input, toutes les fonctions d'
+output ont un argument unique pour chacune d'elle qui est utilisé pour
+identifier chaque sortie: c'est \textbf{l'outputiD.} L'outputiD permet
+de commander au serveur le type de sortie à génerer pour chaque output
+défini dans l'interface d'où l'importance de son unicité.
+
+Jusque-là, aucune sortie n'est visible sur l'application: leur affichage
+est commandé par le serveur\ldots{}
+
+\hypertarget{le-serveur}{%
+\subsection{Le serveur}\label{le-serveur}}
+
+Le serveur est \textbf{``le cerveau''} de l'application shiny. Il reçoit
+les interactions de l'utilisateur depuis l'interface utilisateur (les
+inputs et outputs ) et génère des sorties dynamiques en fonction de ces
+interactions. Les fonctions
+\textcolor{blue}{renderXXX() , reactive() , observe()} permettent de
+génerer ces sorties dynamiques.
+
+\hypertarget{les-fonctions-renderxxx}{%
+\subsubsection{Les fonctions
+renderXXX()}\label{les-fonctions-renderxxx}}
+
+Au niveau du serveur, les différentes fonctions \texttt{render()}
+\emph{(d'où la notation renderXXX())} permettent de génerer une sortie
+en fonction des outputs placés dans l'interface utilisateur. Par exemple
+pour générer la sortie de graphique on utilise la fonction
+\textcolor{blue}{renderplot()} correspondant à la fonction plotOutput()
+utilisée dans le mainPanel().
+
+Voici différentes fonctions \texttt{render()} et leurs fonctions :
+
+\includegraphics{images/clipboard-1366837203.png}
+
+Dans l'exemple qui suit, en fonction des outputs définis plus haut, nous
+allons utiliser \textbf{rendertext()} pour afficher le nom et prénom de
+l'utilisateur, \textbf{renderDT()} pour afficher notre table de données
+interactive de la base Iris et \textbf{renderPlot()} pour afficher les
+histogrammes.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{server }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(input, output) \{}
+  \CommentTok{\#texte}
+\NormalTok{  output}\SpecialCharTok{$}\NormalTok{name}\OtherTok{=}\FunctionTok{renderText}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"Je m\textquotesingle{}appelle "}\NormalTok{ ,input}\SpecialCharTok{$}\NormalTok{text))}
+\NormalTok{  output}\SpecialCharTok{$}\NormalTok{iris\_data}\OtherTok{=}\FunctionTok{renderDT}\NormalTok{(\{iris\})}
+  \CommentTok{\#resumé statistiques}
+\NormalTok{  output}\SpecialCharTok{$}\NormalTok{summary}\OtherTok{=}\FunctionTok{renderPrint}\NormalTok{(\{}
+    \FunctionTok{summary}\NormalTok{(iris) \})}
+  \CommentTok{\#Histogrammes}
+\NormalTok{  output}\SpecialCharTok{$}\NormalTok{hist}\OtherTok{=}\FunctionTok{renderPlot}\NormalTok{(\{ }\FunctionTok{hist}\NormalTok{(iris[[input}\SpecialCharTok{$}\NormalTok{var]], }
+\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\FunctionTok{min}\NormalTok{(iris[[input}\SpecialCharTok{$}\NormalTok{var]]), }\FunctionTok{max}\NormalTok{(iris[[input}\SpecialCharTok{$}\NormalTok{var]]), }\AttributeTok{length.out =}\NormalTok{ input}\SpecialCharTok{$}\NormalTok{slider),}
+\AttributeTok{main =} \FunctionTok{paste}\NormalTok{(}\StringTok{"Histogramme de"}\NormalTok{, input}\SpecialCharTok{$}\NormalTok{var),}
+\AttributeTok{xlab =}\NormalTok{ input}\SpecialCharTok{$}\NormalTok{var,}
+\AttributeTok{ylab =} \StringTok{"Fréquence"}\NormalTok{) \})}
+\NormalTok{\}  }
+\end{Highlighting}
+\end{Shaded}
+
+Sortie texte :
+
+\includegraphics{images/clipboard-970673341.png}
+
+Sortie table :
+
+\includegraphics{images/clipboard-3180338201.png}
+
+Sortie Statistique :
+
+\includegraphics{images/clipboard-2535548311.png}
+
+Sortie Histogramme :
+
+\includegraphics{images/clipboard-927707726.png}
+
+\hypertarget{autres-fonctions-du-server}{%
+\subsubsection{Autres fonctions du
+server}\label{autres-fonctions-du-server}}
+
+Shiny utilise \textbf{la programmation réactive} : si une modification
+est apportée à une variable, tout ce qui utilise cette variable est
+réévalué. La réactivité permet de mettre à jour automatiquement une
+sortie ( un graphique, un tableau, une carte Leaflet\ldots) lorsqu'une
+entrée est modifiée (un textInput, un selectInput, un jeu de données,
+etc.).
+
+Les entrées sont toujours des variables réactives, et elles ne peuvent
+être utilisées que dans un contexte réactif.
+
+Les fonctions renderXXX() sont des contextes réactifs, nous pouvons donc
+utiliser \textcolor{blue}{input\$variable} dans n'importe quelle
+fonction renderXXX(). Cependant, la fonction server() ne l'est pas, et
+la variable d'entrée n'est pas accessible directement à l'intérieur de
+la fonction server(). Ainsi le code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{server }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(input, output)\{}
+  \FunctionTok{print}\NormalTok{(input}\SpecialCharTok{$}\NormalTok{name) }
+\NormalTok{\} }
+\end{Highlighting}
+\end{Shaded}
+
+renvoie une erreur.
+
+Heureusement il existe d'autres contextes reactifs tels que les
+fonctions
+\textcolor{blue}{reactive(), observe(), eventReactive(), reactiveValues(), etc}
+
+\hypertarget{la-fonction-reactive}{%
+\subsection{La fonction reactive(\{\})}\label{la-fonction-reactive}}
+
+La réactivité est l'un des aspects fondamentaux de Shiny dans la
+conception des applications web. Dans le contexte de Shiny, la
+réactivité se réfère à la \textbf{capacité de mettre à jour
+dynamiquement l'interface utilisateur en réponse à des événements ou des
+changements effectués dans les données.} Différentes fonctions sont
+utilisées au niveau du serveur pour créer ce contexte réactif ou le
+contrôler notamment les fonctions renderXXX() ou encore :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{reactive ()} et \textbf{reactiveValues()} : elles permettent
+  de définir des variables réactives qui sont recalculées
+  automatiquement chaque fois que les données sur lesquelles elles
+  dépendent changent. Cela permet de maintenir des données à jour sans
+  avoir à les recalculer manuellement à chaque changement.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(DT)}
+\NormalTok{server }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(input, output, session) \{    }
+\NormalTok{    df}\OtherTok{=}\FunctionTok{reactive}\NormalTok{(\{ }
+\NormalTok{    iris}
+\NormalTok{    \})}\CommentTok{\#Création de la variable reactive}
+  
+\NormalTok{  output}\SpecialCharTok{$}\NormalTok{iris\_data}\OtherTok{=}\FunctionTok{renderDT}\NormalTok{(\{}
+    \FunctionTok{df}\NormalTok{() }\CommentTok{\#Utilisation de la variable dans une fonction render}
+\NormalTok{  \})}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  \textbf{observeEvent ()}: permet de réagir de manière spécifique à des
+  événements utilisateur, tels que le clic d'un bouton.
+\item
+  \textbf{observe ()} : cette fonction surveille les expressions
+  réactives ou les valeurs réactives, mais ne génère pas de sortie
+  directe vers l'interface utilisateur. Elle est principalement utilisée
+  pour des tâches telles que la manipulation de données,
+  l'enregistrement de données dans une base de données, l'envoi de
+  notifications, etc. observe () permet d'effectuer des opérations
+  réactives qui n'ont pas besoin de générer de sortie directement
+  visible par l'utilisateur.
+\item
+  \textbf{isolate ()} : est utilisée pour empêcher la propagation des
+  dépendances réactives dans certaines parties du code. Cela peut être
+  utile pour éviter les recalculs inutiles.
+\end{enumerate}
+
+\newpage
+
+\hypertarget{amuxe9lioration-de-lapparence-dune-application-shiny}{%
+\section{Amélioration de l'apparence d'une application
+Shiny}\label{amuxe9lioration-de-lapparence-dune-application-shiny}}
+
+L'amélioration de l'apparence d'une application Shiny passe non
+seulement par une bonne structuration de l'application telle que,la
+disposition des panneaux, onglets qui ont été mentionnés plus haut mais
+aussi le changement de thèmes\ldots{}
+
+\hypertarget{la-librairie-shinythemes}{%
+\subsection{La librairie Shinythemes}\label{la-librairie-shinythemes}}
+
+Le moyen le plus simple pour commencer est d'utiliser
+\textbf{shinythemes}. C'est un package qui permet de changer le thème
+par défaut de l'application shiny avec une large gamme de modèles
+prédéfinis.
+
+Pour changer de thème, dans l'ui, ajouter le nouveau thème à l'aide de
+la fonction \textbf{shinytheme()}.
+
+Dans l'exemple qui suit, nous avons utilisé le thème \emph{superhero}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(shinythemes)}
+
+\NormalTok{ui }\OtherTok{\textless{}{-}} \FunctionTok{fluidPage}\NormalTok{(}\AttributeTok{theme =} \FunctionTok{shinytheme}\NormalTok{(}\StringTok{"superhero"}\NormalTok{),}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{images/superhero.png}
+
+La liste de tous les thèmes disponibles se trouve sur le site
+\textcolor{blue}{library(Bootswatch)}.
+
+\hypertarget{thuxe8me-personnalisuxe9}{%
+\subsection{Thème personnalisé}\label{thuxe8me-personnalisuxe9}}
+
+Pour créer un thème ou utiliser un thème qui ne fait pas partie de
+shinythemes, il faudrait créer un sous-répertoire \textbf{``www''} dans
+le répertoire d'application, placer le fichier \textbf{CSS}(Cascading
+Style Sheets) du nouveau thème et ajouter la ligne suivante dans l'ui:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ui }\OtherTok{\textless{}{-}} \FunctionTok{fluidPage}\NormalTok{(}\AttributeTok{theme =} \StringTok{"theme.css"}\NormalTok{,}
+                
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{NB:} Mettre le fichier css dans un sous-répertoire appelé
+``www'' de votre application est très important! C'est la raison numéro
+1 si cela ne fonctionne pas.
+
+Il y a beaucoup plus de possibilités pour l'amélioration de l'interface
+et de l'expérience utilisateur avec Shiny et il existe également de
+nombreux packages pouvant aider notamment
+\textcolor{blue}{shinydashboard}.
+
+\newpage
+
+\hypertarget{shinydashboard}{%
+\section{Shinydashboard}\label{shinydashboard}}
+
+Le package Shinydashboard est une extension du package Shiny qui permet
+de \textbf{créer des tableaux de bord interactifs et esthétiques dans
+les applications web développées avec R Shiny}. Il offre un ensemble
+d'outils et de composantes pour concevoir des interfaces utilisateur
+riches et complexes avec une mise en page de type tableau de bord.
+
+\hypertarget{structure-dun-dashboard}{%
+\subsection{Structure d'un dashboard}\label{structure-dun-dashboard}}
+
+De la même manière qu'une application créée avec shiny, l'application
+créée avec Shinydashboard comprend une partie interface utilisateur, une
+partie serveur et une autre pour l'execution de l'application. La
+logique est la même que sur shiny: la partie UI définit la mise en page,
+les composants visuels et les interactions avec l'utilisateur et le
+serveur permet de génerer les sorties.
+
+\hypertarget{les-principales-dispositions}{%
+\subsection{Les principales
+dispositions}\label{les-principales-dispositions}}
+
+Dans la partie \textbf{interface utilisateur} , la mise en page est
+assurée par la fonction \texttt{dashboardPage()} qui prend en argument :
+
+\begin{itemize}
+\item
+  la fonction \texttt{dashboardHeader()} permettant de créer l'en-tête
+  de l'application;
+\item
+  la fonction \texttt{dashboardSidebar()} pour la création du panneau
+  latéral;
+\item
+  la fonction \texttt{dashboardBody()} pour la création de la partie
+  principale.
+\end{itemize}
+
+D'autres arguments sont également possibles mais optionnels :
+\texttt{title}(titre dans le navigateur), \texttt{skin}(l'habillage ou
+couleur principale de l'application qui par défaut est bleue).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ui }\OtherTok{\textless{}{-}} \FunctionTok{dashboardPage}\NormalTok{(}
+  \FunctionTok{dashboardHeader}\NormalTok{(}\AttributeTok{title=}\StringTok{"L\textquotesingle{}en{-}tete"}\NormalTok{),}
+  \FunctionTok{dashboardSidebar}\NormalTok{(}\AttributeTok{title=}\StringTok{"Le panneau latéral "}\NormalTok{),}
+  \FunctionTok{dashboardBody}\NormalTok{(}\StringTok{"Le panneau principal "}\NormalTok{),}
+  \AttributeTok{skin=}\StringTok{"purple"}
+\NormalTok{)}
+\NormalTok{server }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(input, output) \{}
+\NormalTok{\}}
+\FunctionTok{shinyApp}\NormalTok{(ui, server)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{proj_shiny_files/figure-latex/shinydashboard-1.pdf}
+
+\includegraphics{images/clipboard-4044933157.png}
+
+\hypertarget{disposition-suppluxe9mentaires}{%
+\subsection{Disposition supplémentaires
+:}\label{disposition-suppluxe9mentaires}}
+
+\hypertarget{en-tuxeate}{%
+\subsubsection{En-tête :}\label{en-tuxeate}}
+
+Mis à part le titre , nous pouvons placer 3 types de menus déroulants
+dans l'en-tete (\textbf{messages, notifications et tâches}).
+
+Cela peut se faire avec la fonction \texttt{dropdownMenuOutput()}dans
+l'UI qui permet de créer un conteneur pour chaque type de menu et
+ensuite, dans le serveur, nous utilisons renderMenu pour afficher
+dynamiquement les contenus dans les menus.
+
+\includegraphics{images/clipboard-342847202.png}
+
+\hypertarget{barre-latuxe9rale}{%
+\subsubsection{Barre latérale :}\label{barre-latuxe9rale}}
+
+La partie latérale contient les elements qui sont généralement utilisés
+pour interagir avec la partie principale, ou encore naviguer entre
+différentes pages ou sections de l'application. Il s'agit des inputs
+habituels (sliderInput,selectInput\ldots) mais aussi des éléments de
+menu qui se présentent sous forme d'onglets créés par la fonction
+\texttt{menuItem()};
+
+La déclaration des \texttt{menuItem} dans le \textbf{dashboardSidebar}
+est suivie d'une déclaration de \texttt{tabItem} au niveau du
+\textbf{dashboardBody}
+\textcolor{blue}{permettant de faire apparaitre le contenu correpondant à l'onglet activé}.
+
+La liaison entre les deux se fait par l'argument \textbf{tabName} qui
+est unique.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dashboardSidebar}\NormalTok{(}
+  \FunctionTok{sidebarMenu}\NormalTok{(}
+    \FunctionTok{menuItem}\NormalTok{(}\StringTok{"Dashboard"}\NormalTok{, }\AttributeTok{tabName =} \StringTok{"dashboard"}\NormalTok{, }\AttributeTok{icon =} \FunctionTok{icon}\NormalTok{(}\StringTok{"dashboard"}\NormalTok{)),}
+    \FunctionTok{menuItem}\NormalTok{(}\StringTok{"Onglets"}\NormalTok{, }\AttributeTok{icon =} \FunctionTok{icon}\NormalTok{(}\StringTok{"th"}\NormalTok{), }\AttributeTok{tabName =} \StringTok{"widgets"}\NormalTok{,}
+             \AttributeTok{badgeLabel =} \StringTok{"new"}\NormalTok{, }\AttributeTok{badgeColor =} \StringTok{"green"}\NormalTok{)}
+\NormalTok{  )}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dashboardBody}\NormalTok{(}
+  \FunctionTok{tabItems}\NormalTok{(}
+    \FunctionTok{tabItem}\NormalTok{(}\AttributeTok{tabName =} \StringTok{"dashboard"}\NormalTok{,}
+      \FunctionTok{h2}\NormalTok{(}\StringTok{"Contenu du Dashboard"}\NormalTok{)}
+\NormalTok{    ),}
+
+    \FunctionTok{tabItem}\NormalTok{(}\AttributeTok{tabName =} \StringTok{"widgets"}\NormalTok{,}
+      \FunctionTok{h2}\NormalTok{(}\StringTok{"Contenu des onglets"}\NormalTok{)}
+\NormalTok{    )}
+\NormalTok{  )}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{images/clipboard-4165437791.png}
+
+\hypertarget{corps-ou-partie-principale}{%
+\subsubsection{Corps ou partie principale
+:}\label{corps-ou-partie-principale}}
+
+Mis à part les \texttt{tabItem},la partie principale peut contenir
+n'importe quel contenu standard de shiny mais, il est en plus possible
+de déclarer des box pouvant inclure différents types de contenus, ce qui
+est plus esthétique pour les tableaux de bord.
+
+Cela se fait avec la fonction \texttt{box()}dans laquelle on peut
+integrer des éléments de type input ou output.
+
+Il en existe trois autres types :
+\texttt{infoBox()},\texttt{valueBox},\texttt{tabBox()}.
+
+La disposition des boites se fait avec \texttt{fluidrow()}ou
+\texttt{column()}.
+
+L'exemple suivant montre la création de differents types de box avec
+affichages d'icônes issues de la bibliothèque \textbf{Font Awesome}, et
+intégration des onglets pour le type tabBox.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{dashboardBody}\NormalTok{(}
+    \FunctionTok{fluidRow}\NormalTok{(}
+      \FunctionTok{box}\NormalTok{(}\AttributeTok{title =} \StringTok{"Box par Défaut"}\NormalTok{, }\StringTok{"Ceci est un exemple de box "}\NormalTok{),}
+     \FunctionTok{infoBox}\NormalTok{(}\StringTok{"info\_box"}\NormalTok{, }\StringTok{"Information"}\NormalTok{, }\StringTok{"Ceci est un exemple d\textquotesingle{}infoBox avec une icône."}\NormalTok{, }
+              \AttributeTok{icon =} \FunctionTok{icon}\NormalTok{(}\StringTok{"info{-}circle"}\NormalTok{)),}
+      \FunctionTok{tabBox}\NormalTok{(}
+        \AttributeTok{title =} \StringTok{"TabBox"}\NormalTok{,}
+        \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"onglet 1"}\NormalTok{, }\StringTok{"Contenu 1"}\NormalTok{, }\AttributeTok{icon =} \FunctionTok{icon}\NormalTok{(}\StringTok{"chart{-}bar"}\NormalTok{)),}
+        \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"onglet 2"}\NormalTok{, }\StringTok{"Contenu 2"}\NormalTok{, }\AttributeTok{icon =} \FunctionTok{icon}\NormalTok{(}\StringTok{"chart{-}pie"}\NormalTok{)),}
+        \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"onglet 3"}\NormalTok{, }\StringTok{"Contenu 3"}\NormalTok{, }\AttributeTok{icon =} \FunctionTok{icon}\NormalTok{(}\StringTok{"chart{-}line"}\NormalTok{))}
+\NormalTok{      ),}
+      \FunctionTok{valueBox}\NormalTok{(}\DecValTok{150}\NormalTok{, }\StringTok{"Nombre total(exemple de valueBox)"}\NormalTok{, }
+               \AttributeTok{icon =} \FunctionTok{icon}\NormalTok{(}\StringTok{"database"}\NormalTok{, }\AttributeTok{lib =} \StringTok{"font{-}awesome"}\NormalTok{))}
+\NormalTok{    )}
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{images/clipboard-2508999486.png}
+
+\hypertarget{le-server}{%
+\subsubsection{Le server}\label{le-server}}
+
+Dans une application ShinyDashboard, le ``server'' conserve toutes les
+fonctions habituelles de Shiny: \emph{render()}, \emph{Output()},
+\emph{reactive()}, \emph{observe()}, \emph{etc}. Ces fonctions sont
+essentielles pour définir le comportement interactif de l'application,
+traiter les données, générer des sorties et maintenir la réactivité de
+l'interface utilisateur.
+
+Dans la partie ``UI'' de l'application, on utilise les fonctions
+tabItem() ou box() pour définir les éléments de contenu dans les onglets
+ou les boîtes du tableau de bord et on y spécifie les sorties que l'on
+souhaite afficher, telles que des graphiques, des tableaux, des valeurs,
+etc., en utilisant des fonctions de sortie comme \textbf{plotOutput(),
+tableOutput(), verbatimTextOutput()}, etc.
+
+Dans le ``server'', les fonctions de rendu comme renderPlot(),
+renderTable(), renderText(), etc., permettent de générer les sorties
+spécifiées dans le ``UI''.
+
+Pour ce qui est de la réactivité, Chaque fois qu'il y a un changement
+dans les entrées des réactifs utilisés pour le rendu des sorties, le
+``server'' est automatiquement déclenché pour recalculer et mettre à
+jour les sorties correspondantes (notamment avec l'utilisation de
+\textcolor{blue}{observe()} ou \textcolor{blue}{reactive()}). Cela
+garantit que l'interface utilisateur reste réactive et que les contenus
+des tabItem ou box soient régulièrement mis à jour en fonction des
+actions de l'utilisateur ou des changements dans les données.
+
+\hypertarget{exemple-dune-application-simple-avec-shinydashboard-utilisant-les-uxe9luxe9ments-vus-pruxe9cuxe9demment}{%
+\subsection{Exemple d'une application simple avec shinydashboard
+utilisant les éléments vus
+précédemment}\label{exemple-dune-application-simple-avec-shinydashboard-utilisant-les-uxe9luxe9ments-vus-pruxe9cuxe9demment}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{x =} \DecValTok{1}\SpecialCharTok{:}\DecValTok{100}\NormalTok{,}
+  \AttributeTok{y =} \FunctionTok{rnorm}\NormalTok{(}\DecValTok{100}\NormalTok{)}
+\NormalTok{)}
+\NormalTok{ui }\OtherTok{\textless{}{-}} \FunctionTok{dashboardPage}\NormalTok{(}
+  \FunctionTok{dashboardHeader}\NormalTok{(}\AttributeTok{title =} \StringTok{"Exemple de tableau de bord"}\NormalTok{,}
+                  \AttributeTok{titleWidth =} \DecValTok{450}\NormalTok{),}
+  \FunctionTok{dashboardSidebar}\NormalTok{(}
+    \FunctionTok{sidebarMenu}\NormalTok{(}
+      \FunctionTok{menuItem}\NormalTok{(}\StringTok{"Onglet 1"}\NormalTok{, }\AttributeTok{tabName =} \StringTok{"tab1"}\NormalTok{),}
+      \FunctionTok{menuItem}\NormalTok{(}\StringTok{"Onglet 2"}\NormalTok{, }\AttributeTok{tabName =} \StringTok{"tab2"}\NormalTok{)}
+\NormalTok{    )}
+\NormalTok{  ),}
+  \FunctionTok{dashboardBody}\NormalTok{(}
+    \FunctionTok{tabItems}\NormalTok{(}
+      \FunctionTok{tabItem}\NormalTok{(}\AttributeTok{tabName =} \StringTok{"tab1"}\NormalTok{,}
+              \FunctionTok{tabBox}\NormalTok{(}\AttributeTok{title =} \StringTok{"Tab Box 1"}\NormalTok{,}
+                     \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Graphique"}\NormalTok{,}
+                              \FunctionTok{plotOutput}\NormalTok{(}\StringTok{"plot1"}\NormalTok{)),}
+                     \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Tableau"}\NormalTok{,}
+                              \FunctionTok{tableOutput}\NormalTok{(}\StringTok{"table1"}\NormalTok{))}
+\NormalTok{              ),}
+              \FunctionTok{infoBox}\NormalTok{(}\StringTok{"Info Box "}\NormalTok{, }\StringTok{"Il s\textquotesingle{}agit de données aléatoires "}\NormalTok{, }\AttributeTok{icon =} \FunctionTok{icon}\NormalTok{(}\StringTok{"info"}\NormalTok{)),}
+              \FunctionTok{valueBox}\NormalTok{(}\FunctionTok{mean}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{x),}\StringTok{"Moyenne de la variable x"}\NormalTok{ , }\AttributeTok{icon =} \FunctionTok{icon}\NormalTok{(}\StringTok{"star"}\NormalTok{))}
+\NormalTok{      ),}
+      \FunctionTok{tabItem}\NormalTok{(}\AttributeTok{tabName =} \StringTok{"tab2"}\NormalTok{,}
+              \FunctionTok{tabBox}\NormalTok{(}\AttributeTok{title =} \StringTok{"Tab Box 2"}\NormalTok{,}
+                     \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Graphique"}\NormalTok{,}
+                              \FunctionTok{plotOutput}\NormalTok{(}\StringTok{"plot2"}\NormalTok{))}
+\NormalTok{              ),}
+\NormalTok{      )}
+\NormalTok{    )}
+\NormalTok{  )}
+\NormalTok{)}
+\NormalTok{server }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(input, output) \{}
+\NormalTok{  output}\SpecialCharTok{$}\NormalTok{plot1 }\OtherTok{\textless{}{-}} \FunctionTok{renderPlot}\NormalTok{(\{}
+    \FunctionTok{plot}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{x, data}\SpecialCharTok{$}\NormalTok{y, }\AttributeTok{main =} \StringTok{"Graphique 1"}\NormalTok{, }\AttributeTok{type =} \StringTok{"l"}\NormalTok{)}
+\NormalTok{  \})}
+\NormalTok{  output}\SpecialCharTok{$}\NormalTok{table1 }\OtherTok{\textless{}{-}} \FunctionTok{renderTable}\NormalTok{(\{}
+    \FunctionTok{head}\NormalTok{(data)}
+\NormalTok{  \})}
+\NormalTok{  output}\SpecialCharTok{$}\NormalTok{plot2 }\OtherTok{\textless{}{-}} \FunctionTok{renderPlot}\NormalTok{(\{}
+    \FunctionTok{plot}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{y, data}\SpecialCharTok{$}\NormalTok{x, }\AttributeTok{main =} \StringTok{"Graphique 2"}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
+\NormalTok{  \})}
+\NormalTok{\}}
+\FunctionTok{shinyApp}\NormalTok{(ui, server)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{proj_shiny_files/figure-latex/exemple_complet-1.pdf}
+
+\includegraphics{images/clipboard-1549962432.png}
+
+\newpage
+
+\hypertarget{publier-une-aplication-shiny}{%
+\section{Publier une aplication
+Shiny}\label{publier-une-aplication-shiny}}
+
+En lançant la commande runApp, R démarre un petit serveur Shiny sur
+notre ordinateur afin que nous puissions tester notre application. Mais
+ce n'est pas la bonne façon si nous souhaitons rendre notre application
+publique, accessible à tout le monde sur internet.
+
+\hypertarget{huxe9bergement-sur-shinyapp}{%
+\subsection{Hébergement sur
+shinyapp}\label{huxe9bergement-sur-shinyapp}}
+
+Il existe plusieurs façons de publier son application Shiny. Une façon
+simple pour y parvenir est d'utiliser le service
+\textcolor{blue}{http://shinyapps.io.} Ce service permet d'héberger
+gratuitement jusqu'à 5 applications par utilisateur. Ceci étant, pour
+héberger une application sur le site \emph{shinyapps.io}, il faut suivre
+les étapes ci-après:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  S'inscrire sur le site et s'y connecter;
+\item
+  Dans le site, un tableau de bord récapitulatif de vos applications
+  s'affiche. Il vous est premièrement demandé d'installer sur R le
+  package \textcolor{blue}{rsconnect} ;
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"rsconnect"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Ensuite, copier les lignes présentées dans la pop-up du type (ceci est
+  un exemple avec le compte \emph{joe-R-Shiny-2022}) :
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rsconnect}\SpecialCharTok{::}\FunctionTok{setAccountInfo}\NormalTok{(}\AttributeTok{name=}\StringTok{\textquotesingle{}joe{-}r{-}shiny{-}2022\textquotesingle{}}\NormalTok{,}
+                          \AttributeTok{token=}\StringTok{\textquotesingle{}6280C86118286E5417298841A85EE625\textquotesingle{}}\NormalTok{,}
+                          \AttributeTok{secret=}\StringTok{\textquotesingle{}ymUisnP7jRsyShTvGW0iAiUwnOGv98HnyMbcMd19\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Exécuter ces lignes sous R : vous êtes alors connecté à votre compte
+  shinyapps.io depuis R.
+\item
+  Il suffit maintenant d'exécuter la ligne de code suivante (mise en
+  commentaire).
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#rsconnect::deployApp("chemin\_vers\_le\_dossier\_de\_votre\_application")}
+\end{Highlighting}
+\end{Shaded}
+
+Votre application est maintenant en ligne.
+
+Dans ce dossier, vous devez soit placer votre fichier ``app.r'' soit vos
+deux fichiers ``ui.r'' et ``server.r''.
+
+\textbf{NB:}
+
+\begin{itemize}
+\item
+  Pour lancer la mise en ligne, ayant déjà un compte sur shinyapp, vous
+  pouvez cliquer sur \textcolor{blue}{Publish application } , situé
+  juste à la droite de Run App.
+\item
+  RStudio vous demandera alors d'aller chercher votre ``token'' prouvant
+  votre identité sur le site de shinyapps.io. Vous copiez-coller cette
+  valeur et vous êtes prêt à rendre votre application publique.
+  L'opération peut prendre quelques minutes parce que shinyapps.io doit,
+  entre autres, installer sur le serveur la liste de tous les packages
+  que vous avez utilisés dans votre application.
+\item
+  Une fois l'opération complétée, votre application s'ouvrira
+  automatiquement dans votre navigateur web.
+\item
+  Si vous perdez l'adresse de votre application, vous avez accès à la
+  liste de toutes vos applications dans votre compte sur shinyapps.io
+\end{itemize}
+
+\hypertarget{mise-uxe0-jour-dune-application-shiny}{%
+\subsection{Mise à jour d'une application
+Shiny}\label{mise-uxe0-jour-dune-application-shiny}}
+
+Pour mettre votre application à jour, vous n'avez qu'à refaire la
+publication avec \emph{Publish Application\ldots{}}. L'ancienne version
+sera effacée et remplacée par la nouvelle.
+
+\newpage
+
+\textcolor{blue}{\section*{CONCLUSION}\addcontentsline{toc}{section}{CONCLUSION}}
+
+R Shiny émerge comme un outil polyvalent et puissant pour le
+développement d'applications web interactives avec R. Sa facilité
+d'installation et d'utilisation en fait un choix attrayant pour les
+analystes de données et les développeurs cherchant à partager leurs
+résultats de manière dynamique.
+
+De la création d'interfaces utilisateur conviviales à la publication en
+ligne de ces applications, Shiny offre une solution complète pour
+répondre aux besoins croissants de visualisation et de communication des
+données. De plus, avec une communauté active et un ensemble croissant de
+ressources et de packages disponibles, les possibilités d'amélioration
+et d'extension des fonctionnalités d'applications Shiny sont
+pratiquement illimitées. C'est ainsi que \textbf{Shinydashboard} offre
+un ensemble d'outils et de composants pour concevoir des interfaces
+utilisateur riches et complexes avec une mise en page de type tableau de
+bord.
+
+Ce rapport constitue une ressource précieuse pour quiconque souhaite
+maîtriser R Shiny et créer des applications web interactives et
+esthétiquement plaisantes pour répondre à divers besoins tels que
+l'analyse de données, la visualisation de données, la recherche
+scientifique et bien d'autres encore.
+
+En somme, investir dans l'apprentissage et la maîtrise de R Shiny promet
+d'être un atout précieux pour tout professionnel cherchant à tirer le
+meilleur parti de ses analyses de données et à les partager de manière
+efficace et engageante.
+
+\newpage
+
+\textcolor{blue}{\section*{BIBLIOGRAPHIE et WEBOGRAPHIE}\addcontentsline{toc}{section}{BIBLIOGRAPHIE et WEBOGRAPHIE}}
+
+\begin{itemize}
+\item
+  Aboubacar HEMA, CoursRAvance , \emph{chap\_4\_avance}, pp.41-44
+\item
+  Alison JOLLOIS, \emph{Dashboard avec shiny} (alisonjollois.github.io)
+\item
+  Aurélien DAVAL, \emph{R: Introduction Au Package Shiny}
+  (aureliendaval.github.io)
+\item
+  Christophe Nicault, \emph{Construisez votre première application avec
+  Shiny}
+\item
+  Christophe Nicault, \emph{Améliorez l'apparence de votre application
+  Shiny}
+\item
+  Dashboards with Shiny, \emph{The Epidemiologist R Handbook}
+  (epirhandbook.com)
+\item
+  \emph{Getting started with Shiny Dashboard} (rstudio.github.io)
+\item
+  Hadley Wickham, \emph{Mastering shiny : Welcome \textbar{} Mastering
+  Shiny} (mastering-shiny.org)
+\item
+  Josue Afouda, \emph{Iris\_Shiny\_web\_app} (github.com)
+\item
+  \emph{Shiny Dashboard} (rstudio.github.io)
+\item
+  \emph{Tutoriel : visualisation avec R} (lrouviere.github.io)
+\end{itemize}
+
+\end{document}
